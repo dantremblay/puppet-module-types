@@ -25,6 +25,12 @@ Hash of resource type `mount`.
 
 - *Default*: undef
 
+files
+------
+Hash of resource type `file`.
+
+- *Default*: undef
+
 ===
 
 # Defines
@@ -67,6 +73,38 @@ Boolean to mount at boot.
 
 `blockdevice`, `dump`, `options`, `pass`, `provider`, `remounts`, `target`
 
+## `types::file`
+
+Ensures the file resource.
+
+### Parameters required or with defaults
+
+ensure
+------
+Type of file resource.
+
+- *Default*: present
+
+Valid values are : present, absent, file, directory, link
+
+owner
+------
+owner of resource.
+
+- *Default*: root
+
+group
+------
+group of resource.
+
+- *Default*: root
+
+mode
+------
+Permission mode of resource.
+
+- *Default*: 0644
+
 ===
 
 # Hiera
@@ -83,4 +121,22 @@ types::mounts:
     device: nfsserver:/export/home
     fstype: nfs
     options: rw,rsize=8192,wsize=8192
+</pre>
+
+## file
+<pre>
+  /tmp/file1:
+    ensure: present
+    mode: 0755
+    owner: some_user
+    group: some_group
+  /localdisk:
+    ensure: directory
+    mode: 0777
+    owner: root
+    group: root
+    content: "This is the content"
+  /softlink:
+    ensure: link
+    target: '/etc/motd'
 </pre>
