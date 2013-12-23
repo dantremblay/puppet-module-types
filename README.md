@@ -105,6 +105,9 @@ Permission mode of resource.
 
 - *Default*: 0644
 
+### Optional parameters. See type reference for more information.
+
+`content`, `backup`, `checksum`, `force`, `ignore`, `links`, `provider`, `purge`, `recurse`, `recurselimit`, `replace`, `selinux_ignore_defaults`, `selrange`, `selrole`, `seltype`, `seluser`, `show_diff`, `source`, `sourceselect`, `target`
 ===
 
 # Hiera
