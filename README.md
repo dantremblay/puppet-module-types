@@ -140,3 +140,4 @@ types::mounts:
     ensure: link
     target: '/etc/motd'
 </pre>
+
