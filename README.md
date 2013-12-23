@@ -83,7 +83,7 @@ ensure
 ------
 Type of file resource.
 
-- *Default*: present
+- *Required*
 
 Valid values are : present, absent, file, directory, link
 

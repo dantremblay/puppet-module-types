@@ -163,14 +163,4 @@ describe 'types' do
       }.to raise_error(Puppet::Error)
     end
   end
-
-  context 'with files specified as an invalid type' do
-    let(:params) { { :files => ['not','a','hash'] } }
-
-    it 'should fail' do
-      expect {
-        should contain_class('types')
-      }.to raise_error(Puppet::Error)
-    end
-  end
 end

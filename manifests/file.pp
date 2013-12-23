@@ -1,8 +1,8 @@
 # == Define: types::file
 #
 define types::file (
+  $ensure,
   $path                    = $name,
-  $ensure                  = present,
   $owner                   = root,
   $group                   = root,
   $mode                    = 0644,
@@ -24,6 +24,7 @@ define types::file (
   $seluser                 = undef,
   $show_diff               = undef,
   $source                  = undef,
+  $source_permissions      = undef,
   $sourceselect            = undef,
   $target                  = undef,
 ) {
@@ -56,6 +57,7 @@ define types::file (
     show_diff               => $show_diff,
     source                  => $source,
     sourceselect            => $sourceselect,
+    source_permissions      => $source_permissions,
     target                  => $target,
   }
 }
