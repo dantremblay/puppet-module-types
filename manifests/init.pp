@@ -4,7 +4,7 @@
 #
 class types (
   $mounts = undef,
-  $files   = undef,
+  $files  = undef,
 ) {
 
   if $mounts != undef {
